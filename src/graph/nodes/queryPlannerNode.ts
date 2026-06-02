@@ -27,10 +27,8 @@ export function createQueryPlannerNode(llmClient: OpenRouterService) {
 
       if(data?.requiresDecomposition && !!data.subQuestions.length){
 
-        return{
-          //ToDo: voltar pra true e implementar geração
-          //isMultiStep: true,
-          isMultiStep: false,
+        return{          
+          isMultiStep: true,
           subQuestions: data.subQuestions,
           currentStep: 0,
           subQueries: [],

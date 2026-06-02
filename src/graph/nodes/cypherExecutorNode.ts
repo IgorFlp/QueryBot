@@ -6,8 +6,8 @@ export function createCypherExecutorNode(neo4jService: Neo4jService) {
   return async (state: GraphState): Promise<Partial<GraphState>> => {
     try {
 
-      return {
-        ...state,
+      return {      
+        isMultiStep: false,
       };
     } catch (error) {
       console.error('Error executing Cypher query:', error instanceof Error ? error.message : error);
