@@ -55,7 +55,7 @@ export function createCypherGeneratorNode(
         }
       }
 
-      return {        
+       return {        
         query: data?.query!,
       };
 
